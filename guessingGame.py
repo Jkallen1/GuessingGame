@@ -12,23 +12,23 @@ def guess(x):
     print(f"Congratulations you have correctly guessed the number {num}") # exits loop and prints this line when correct num guessed
 
 
-
+#function to have computer guess your secret number
 
 def computer_guess(x):
-    low = 1
-    high = x
-    feedback = ""
-    while feedback != "c":
-        if low != high:
-            guess = random.randint(low, high)
+    low = 1 #setting the lowest option to guess
+    high = x #setting high point
+    feedback = "" 
+    while feedback != "c": #looping through feedback empty string
+        if low != high: #makes sure low and high are not equal
+            guess = random.randint(low, high) #has the computer guess a random number
         else:
             guess = high
-        feedback = input(f"Is {guess} to high (H), to low (L), or correct (C)").lower() 
+        feedback = input(f"Is {guess} to high (H), to low (L), or correct (C)").lower() #gets user input to manually tell the computer if too high or low
         if feedback == 'h':
-            high = guess - 1
+            high = guess - 1 #changes the high minus one to know to stay under that number 
         elif feedback == 'l':
-            low = guess + 1
-    print(f"Congrats!! The computer guessed your number, {guess}, correctly!")
+            low = guess + 1 #changes the low plus one to know to stay above that number
+    print(f"Congrats!! The computer guessed your number, {guess}, correctly!") #prints when correctly guessed
 
 
 
