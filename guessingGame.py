@@ -23,7 +23,7 @@ def computer_guess(x):
             guess = random.randint(low, high)
         else:
             guess = high
-        feedback = input(f"Is guess to high (H), to low (L), or correct (C)").lower
+        feedback = input(f"Is {guess} to high (H), to low (L), or correct (C)").lower() 
         if feedback == 'h':
             high = guess - 1
         elif feedback == 'l':
@@ -32,4 +32,4 @@ def computer_guess(x):
 
 
 
-    computer_guess(1000)
+computer_guess(1000)
